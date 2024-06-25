@@ -48,10 +48,10 @@ function App() {
     });
     setScore(newScore);
     const newEntry = { name, score: newScore };
+    alert(`${name}, your score: ${newScore} out of ${questions.length}`);
     const updatedLeaderboard = [...leaderboard, newEntry];
     localStorage.setItem("leaderboard", JSON.stringify(updatedLeaderboard));
     setLeaderboard(updatedLeaderboard);
-    alert(`${name}, your score: ${score} out of ${questions.length}`);
     setAnswers({});
     setIsQuizStarted(false);
     setName("");
